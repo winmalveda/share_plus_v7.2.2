@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 internal class ShareSuccessManager(private val context: Context) : ActivityResultListener {
     private var callback: MethodChannel.Result? = null
     private var isCalledBack: AtomicBoolean = AtomicBoolean(true)
-    private boolean isResultSubmitted = false
+    private var isResultSubmitted: Boolean = false 
 
     /**
      * Set result callback that will wait for the share-sheet to close and get either
