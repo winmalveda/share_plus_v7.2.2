@@ -62,6 +62,8 @@ internal class ShareSuccessManager(private val context: Context) : ActivityResul
                 isResultSubmitted = true;
                 returnResult(SharePlusPendingIntent.result)
                 true
+            } else {
+                false // Return false if result was already submitted
             }
         } else {
             false
